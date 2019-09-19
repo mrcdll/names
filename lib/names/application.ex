@@ -7,7 +7,7 @@ defmodule Names.Application do
       Names.FirstServer
     ]
 
-    opts = [strategy: :one_for_one, name: __MODULE__]
+    opts = [strategy: :one_for_one]
     Supervisor.start_link(children, opts)
   end
 end

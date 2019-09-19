@@ -2,7 +2,7 @@ defmodule Names.SecondSupervisor do
   use DynamicSupervisor
 
   def start_link() do
-    DynamicSupervisor.start_link(__MODULE__, [], name: :"#{__MODULE__}#{Names.uniq_integer()}")
+    DynamicSupervisor.start_link(__MODULE__, [])
   end
 
   def init(_opts) do
